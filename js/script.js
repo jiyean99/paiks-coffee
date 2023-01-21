@@ -1,4 +1,23 @@
-//////// page indicator ////////
+// react menu - hamburger menu btn
+$(function(){
+    $(".nav-btn>span").click(function(){
+        $(".react-menu").show();
+    })
+    $(".react-close").click(function(){
+        $(".react-menu").hide();
+    })
+})
+// react menu - submenu-toggle
+$(function(){
+	$("nav>ul>li").click(function(){
+		$(this).find(".res-sub-menu").stop().slideToggle(300)
+	})
+	$("nav>ul>li").click(function(){
+		$(".res-sub-menu").find(".res-sub-menu").stop().slideToggle(300)
+	})
+});
+
+// page indicator
 $(function(){
     //Set count for total number of sections
     $('.num-indi').text($('.main-slide').size());
